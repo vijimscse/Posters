@@ -78,6 +78,7 @@ class MovieListActivity : AppCompatActivity(),
 
     override fun onBackPressed() {
         if (searchMode) {
+            search_input.setText("")
             searchMode = false
             close.visibility = View.GONE
             search.visibility = View.VISIBLE

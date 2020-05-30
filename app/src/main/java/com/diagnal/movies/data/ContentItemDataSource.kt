@@ -12,14 +12,12 @@ class ContentItemDataSource : PageKeyedDataSource<Int, ContentItem> {
     companion object {
         const val PAGE_SIZE = 50
         const val PAGE1 = "CONTENTLISTINGPAGE-PAGE1.json"
-
         const val PAGE2 = "CONTENTLISTINGPAGE-PAGE2.json"
-
         const val PAGE3 = "CONTENTLISTINGPAGE-PAGE3.json"
     }
 
-    var filterText: String = ""
-    lateinit var mContext: Context
+    var filterText: String
+    var mContext: Context
 
     constructor(context: Context, s: String) : super() {
         filterText = s
